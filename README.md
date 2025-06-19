@@ -19,7 +19,7 @@ exit()
 
 you have now dowloaded all libraries and dependencies required to run the code!
 
-You can now run the program by cmd typing (in the same directory as main.jl)
+While being in the same directory as `main.jl`, you can now run the program by cmd typing
 
 ```
 julia --project=. main.jl
