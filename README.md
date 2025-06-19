@@ -15,7 +15,6 @@ using Pkg
 Pkg.activate(".")
 Pkg.instantiate()
 exit()
-
 ```
 
 you have now dowloaded all libraries and dependencies required to run the code!
@@ -24,7 +23,6 @@ You can now run the program by cmd typing (in the same directory as main.jl)
 
 ```
 julia --project=. main.jl
-
 ```
 
 if `__precompile__` error occours then seek for `XStream.jl` file and add as first line the following instruction:
