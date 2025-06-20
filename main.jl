@@ -16,7 +16,7 @@ function build_gui()
     lbl_x = GtkLabel("x [%]:")
     ent_x = GtkEntry(text="60.0")
 
-    lbl_T = GtkLabel("T [°C]:")
+    lbl_T = GtkLabel("T [K]:")
     ent_T = GtkEntry(text="298.15")
 
     lbl_p = GtkLabel("p [kPa]:")
