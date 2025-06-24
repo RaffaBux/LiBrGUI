@@ -35,7 +35,7 @@ function build_gui()
     lbl_h = GtkLabel("h [J/g]:")
     ent_h = GtkEntry(text="10000.0")
 
-    lbl_s = GtkLabel("s [J/g·K]:")
+    lbl_s = GtkLabel("s [J/g-K]:")
     ent_s = GtkEntry(text="50.0")
 
     push!(h2, lbl_h, ent_h, lbl_s, ent_s)
@@ -95,10 +95,10 @@ function build_gui()
         end
 
         props = [
-            ("Thermal conductivity [W/m·K]",            () -> libr_k(x, T)),
+            ("Thermal conductivity [W/m-K]",            () -> libr_k(x, T)),
             ("Enthalpy [J/g]",                          () -> libr_h(x, T, p)),
-            ("Entropy [J/g·K]",                         () -> libr_s(x, T, p)),
-            ("Specific heat [J/g·K]",                   () -> libr_cp(x, T, p)),
+            ("Entropy [J/g-K]",                         () -> libr_s(x, T, p)),
+            ("Specific heat [J/g-K]",                   () -> libr_cp(x, T, p)),
             ("Dynamic viscosity [cP]",                  () -> libr_μ(x, T)),
             ("Chemical potential of water [J/g]",       () -> libr_uw(x, T, p)),
             ("libr_u (?????)",                          () -> libr_u(x, T, p)),
@@ -112,10 +112,10 @@ function build_gui()
             ("Index of refraction [---]",               () -> libr_refindex(x, T)),
             ("Partial mass Gibbs function [J/g]",       () -> libr_part_g(x, T, p)),
             ("Partial mass enthalpy [J/g]",             () -> libr_part_h(x, T, p)),
-            ("Partial mass entropy [J/g·K]",            () -> libr_part_s(x, T, p)),
+            ("Partial mass entropy [J/g-K]",            () -> libr_part_s(x, T, p)),
             ("Partial mass volume [m^3/kg]",            () -> libr_part_v(x, T)),
-            ("Temperature according Enthalpy [K]",      () -> libr_xht(x, h, p)),
-            ("Mass faction according Enthalpy [%]",     () -> libr_htx(h, T, p)),
+            ("Temperature according enthalpy [K]",      () -> libr_xht(x, h, p)),
+            ("Mass faction according enthalpy [%]",     () -> libr_htx(h, T, p)),
             ("Temperature according entropy [K]",       () -> libr_xst(x, s, p)),
             ("Mass faction according entropy [%]",      () -> libr_stx(s, T, p))
         ]

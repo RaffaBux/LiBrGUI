@@ -1,6 +1,6 @@
 # LiBrGUI
 
-All the inputs refer to water's (H2O) properties.
+All the inputs refer to lithium bromide and water liquid solution's properties.
 
 ## How to run
 
